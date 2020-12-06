@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('node-postgresql:server');
+var debug = require('debug')('node-g:server');
 var http = require('http');
 
 /**
