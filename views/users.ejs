@@ -15,7 +15,6 @@
 
 <body>
   <%- include('navbar.ejs') %>
-
   <!-- table -->
   <div class="container">
     <div class="row col-md-12 custyle">
@@ -33,17 +32,24 @@
         </thead>
         <tbody>
           <!-- //TODO: userList from db to be mapped -->
-          <tr>
-            <td>1</td>
-            <td>John</td>
-            <td>Doe</td>
-            <td>12/12/2020</td>
-            <td>12/12/2020</td>
-            <td class="text-center">
-              <a class="btn btn-info btn-xs" href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-              <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
-            </td>
-          </tr>
+<% userList.map(user => { %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.firstName %></td>
+    <td><%= user.firstName %></td>
+    <td><%= user.createdAt %></td>
+    <td><%= user.updatedAt %></td>
+    <td class="text-center">
+      <a class="btn btn-info btn-xs" href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+      <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a>
+    </td>
+  </tr>
+<% }) %>
+
+
+
+
+          
         </tbody>
       </table>
     </div>
