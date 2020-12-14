@@ -1,35 +1,22 @@
 {
-  "name": "g",
+  "name": "node",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
-    "ejs": "~2.6.1",
+    "ejs": "^3.1.5",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.6",
     "pg": "^8.5.1",
+    "save-dev": "0.0.1-security",
     "sequelize": "^6.3.5"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  },
-  "description": "CLARUSWAY nodejs postgres project",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omur8819/node-postgresql.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/omur8819/node-postgresql/issues"
-  },
-  "homepage": "https://github.com/omur8819/node-postgresql#readme"
+  }
 }
