@@ -15,7 +15,6 @@ sequelize
 // recruiter table in the clarusway db
 
 // modelname, attribute, options
-
 const UserModel = sequelize.define(
   "recruiters",
   {
@@ -23,9 +22,11 @@ const UserModel = sequelize.define(
     //id, firstName, lastName, createdAt, updatedAt
     firstName: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     lastName: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {

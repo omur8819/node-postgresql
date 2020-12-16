@@ -24,5 +24,21 @@ exports.add_user = async (req, res) => {
       lastName: req.body.lastName,
     });
     res.redirect("/users");
-  } catch (error) {}
+  } catch (error) {
+    res.send("An error occured.");
+  }
+};
+
+//on delete request
+exports.delete_user = async (req, res) => {
+  try {
+    await UserModel.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.redirect("/users");
+  } catch (error) {
+    console.log("error", error);
+  }
 };
